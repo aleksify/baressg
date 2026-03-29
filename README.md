@@ -1,6 +1,12 @@
 # baressg
 
-A minimal static site generator from Markdown files using Make and [lowdown](https://kristaps.bsd.lv/lowdown/).
+A minimal static site generator from Markdown documents using Make and [lowdown](https://kristaps.bsd.lv/lowdown/).
+
+## Features
+- Automatically creates folder structure
+- Prunes deleted files
+- Optional back button
+- Generates HTML from Markdown using `lowdown`
 
 ## Requirements
 
@@ -11,10 +17,10 @@ A minimal static site generator from Markdown files using Make and [lowdown](htt
 
 ```sh
 make         # build src/ into out/
-make BACK=1  # add optional back button
+make BACK=1  # build with back button
 make clean   # remove out/
 make re      # clean + build
-make example # copy example/ into src/ and build
+make example # copy example/ into src/, build with BACK=1, and open in the browser
 ```
 
 ## Example Structure
