@@ -41,3 +41,4 @@ re: clean all
 example:
 	@cp -r example src
 	@$(MAKE) all BACK=1
+	@xdg-open $(CURDIR)/out/index.html 2>/dev/null || open $(CURDIR)/out/index.html 2>/dev/null
