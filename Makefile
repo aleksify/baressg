@@ -28,6 +28,9 @@ $(OUT_DIR)/index.html: $(SRC_DIR)/index.md
 $(OUT_DIR)/%/index.html: $(SRC_DIR)/%.md
 	@mkdir -p $(dir $@)
 	@$(LOWDOWN) $(LOWDOWNFLAGS) $< -o $@
+ifdef BACK
+	@sed 's|<body>|<body><nav><a href="../index.html">← Back</a></nav>|' $@ > $@.tmp && mv $@.tmp $@
+endif
 	@echo "✓ $< → $@"
 
 clean:

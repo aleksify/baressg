@@ -11,6 +11,7 @@ A minimal static site generator from Markdown files using Make and [lowdown](htt
 
 ```sh
 make         # build src/ into out/
+make BACK=1  # add optional back button
 make clean   # remove out/
 make re      # clean + build
 make example # copy example/ into src/ and build
