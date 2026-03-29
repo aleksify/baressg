@@ -40,4 +40,4 @@ re: clean all
 
 example:
 	@cp -r example src
-	@$(MAKE) all
+	@$(MAKE) all BACK=1
