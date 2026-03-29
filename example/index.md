@@ -3,8 +3,8 @@ title: hello world
 ---
 
 ## Featured Posts
-- [about me](about/)
-- [blog index](blog/)
+- [about me](about/index.html)
+- [blog index](blog/index.html)
 
 ---
 
