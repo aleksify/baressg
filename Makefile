@@ -39,6 +39,14 @@ clean:
 re: clean all
 
 example:
-	@cp -r example src
-	@$(MAKE) all BACK=1
+	@if [ ! -d src ]; then \
+		cp -r example src; \
+		$(MAKE) all BACK=1; \
+	else \
+		mv src src-temp; \
+		cp -r example src; \
+		$(MAKE) all BACK=1; \
+		rm -rf src; \
+		mv src-temp src; \
+	fi
 	@xdg-open $(CURDIR)/out/index.html 2>/dev/null || open $(CURDIR)/out/index.html 2>/dev/null
