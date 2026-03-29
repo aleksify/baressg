@@ -1,17 +1,17 @@
 # baressg
 
-A minimal static site generator from Markdown documents using Make and [lowdown](https://kristaps.bsd.lv/lowdown/).
+A barebones static site generator. For more features, look into [Zola](https://github.com/getzola/zola), [Hugo](https://github.com/gohugoio/hugo), or [Jekyll](https://github.com/jekyll/jekyll).
 
 ## Features
-- Automatically creates folder structure
+- Converts Markdown to HTML using [lowdown](https://kristaps.bsd.lv/lowdown/)
+- Generates clean URL slugs (`src/about.md` → `out/about/index.html`)
 - Prunes deleted files
-- Optional back button
-- Generates HTML from Markdown using `lowdown`
+- Optional back button (`make BACK=1`)
 
 ## Requirements
 
-- `make`
-- `lowdown`
+- GNU make (`make` on Linux/macOS, `gmake` on BSD)
+- [lowdown](https://kristaps.bsd.lv/lowdown/)
 
 ## Usage
 
