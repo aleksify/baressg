@@ -7,6 +7,7 @@ A barebones static site generator. For more features, look into [Zola](https://g
 - Generates clean URL slugs (`src/about.md` → `out/about/index.html`)
 - Prunes deleted files
 - Optional back button (`make BACK=1`)
+- Specify CSS in makefile (uses [Simple.css](https://simplecss.org/) by default)
 
 ## Requirements
 
@@ -37,8 +38,3 @@ src/
 
 - `src/index.md` is treated specially — it outputs to `out/index.html` directly
 - All other `.md` files become `out/<slug>/index.html`
-- Stale output files are pruned automatically on each build
-
-## Styling
-
-Uses [Simple.css](https://simplecss.org/) by default. Change the `CSS` variable in the Makefile to use your own.
