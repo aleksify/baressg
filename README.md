@@ -20,7 +20,7 @@ make         # build src/ into out/
 make BACK=1  # build with back button
 make clean   # remove out/
 make re      # clean + build
-make example # copy example/ into src/, build with BACK=1, and open in the browser
+make example # demo example/ in browser
 ```
 
 ## Example Structure
