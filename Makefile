@@ -12,7 +12,7 @@ TARGETS			:= $(patsubst $(SRC_DIR)/%.md, $(OUT_DIR)/%/index.html, $(filter-out $
 EXISTING		:= $(shell find $(OUT_DIR) -name '*.html' 2>/dev/null)
 STALE			:= $(filter-out $(TARGETS) $(OUT_DIR)/index.html, $(EXISTING))
 
-.PHONY: all prune clean re
+.PHONY: all prune clean re example
 
 all: prune $(OUT_DIR)/index.html $(TARGETS)
 
@@ -34,3 +34,7 @@ clean:
 	rm -rf $(OUT_DIR)
 
 re: clean all
+
+example:
+	@cp -r example src
+	@$(MAKE) all
