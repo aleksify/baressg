@@ -7,16 +7,23 @@ LOWDOWN			:= lowdown
 LOWDOWNFLAGS	:= -s -Thtml -M css=$(CSS)
 
 SRCS			:= $(shell find $(SRC_DIR) -name '*.md')
-TARGETS			:= $(patsubst $(SRC_DIR)/%.md, $(OUT_DIR)/%.html, $(SRCS))
+TARGETS			:= $(patsubst $(SRC_DIR)/%.md, $(OUT_DIR)/%/index.html, $(SRCS))
 
-.PHONY: all clean
+.PHONY: all clean re
 
 all: $(TARGETS)
 
-$(OUT_DIR)/%.html: $(SRC_DIR)/%.md
-	mkdir -p $(dir $@)
-	$(LOWDOWN) $(LOWDOWNFLAGS) $< -o $@
+$(OUT_DIR)/index.html: $(SRC_DIR)/index.md
+	@mkdir -p $(dir $@)
+	@$(LOWDOWN) $(LOWDOWNFLAGS) $< -o $@
+	@echo "✓ $< → $@"
+
+$(OUT_DIR)/%/index.html: $(SRC_DIR)/%.md
+	@mkdir -p $(dir $@)
+	@$(LOWDOWN) $(LOWDOWNFLAGS) $< -o $@
 	@echo "✓ $< → $@"
 
 clean:
 	rm -rf $(OUT_DIR)
+
+re: clean all
