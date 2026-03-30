@@ -1,6 +1,6 @@
 # About Me
 
-## Hi, I'm Joe Doe 👋
+## Hi, I'm a human 👋
 
 I'm a homo sapiens.
 
@@ -14,8 +14,8 @@ I'm a homo sapiens.
 
 ## Get In Touch
 
-📧 joe@example.com  
-🐘 [@example@example](#)
+📧 human@example.com  
+🐘 [@human@example](#)
 
 ---
 

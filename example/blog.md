@@ -2,5 +2,5 @@
 title: blog index
 ---
 
-- [md-guide](md-guide/index.html)
-- [madeira](madeira/index.html)
+- [markdown guide](md-guide/index.html)
+- [image](triune/index.html)

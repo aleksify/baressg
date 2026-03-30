@@ -2,7 +2,7 @@
 title: markdown guide
 ---
 
-# Getting Started with Markdown: A Beginner's Guide
+# Getting Started with Markdown
 
 ---
 
