@@ -46,11 +46,11 @@ endif
 # --------------------------------- Clean ------------------------------------ #
 
 clean:
-	find $(OUT_DIR) -name "*.html" -delete
-	find $(OUT_DIR) -mindepth 1 -type d -empty -delete
+	@find $(OUT_DIR) -name "*.html" -delete
+	@find $(OUT_DIR) -mindepth 1 -type d -empty -delete
 
 re: clean
-	$(MAKE) all
+	@$(MAKE) all
 
 # --------------------------------- Example ---------------------------------- #
 
