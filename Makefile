@@ -43,6 +43,13 @@ ifdef BACK
 endif
 	@echo "✓ $< → $@"
 
+push: all
+	@read -p "Commit message (Press Enter for timestamp): " msg; \
+	if [ -z "$$msg" ]; then msg="Deploy: $$(date +'%Y-%m-%d %H:%M:%S')"; fi; \
+	git add -A; \
+	git commit -m "$$msg" || echo "No changes to commit"; \
+	git push
+
 # --------------------------------- Clean ------------------------------------ #
 
 clean:
